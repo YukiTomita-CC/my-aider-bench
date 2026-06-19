@@ -143,7 +143,6 @@ def run_benchmark(
         "--threads", str(threads),
         "--languages", language,
         "--read-model-settings", model_settings_path,
-        "--num-tests", "1"
     ]
     log.info("Running: " + " ".join(cmd))
     subprocess.run(cmd, check=True)
