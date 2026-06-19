@@ -45,7 +45,7 @@ def download_model(repo: str, gguf_filter: str, local_dir: str) -> None:
     log.info(f"Downloading {repo}  filter={gguf_filter}")
     subprocess.run(
         [
-            "huggingface-cli", "download", repo,
+            "hf", "download", repo,
             "--include", gguf_filter,
             "--local-dir", local_dir,
         ],
@@ -143,6 +143,7 @@ def run_benchmark(
         "--threads", str(threads),
         "--languages", language,
         "--read-model-settings", model_settings_path,
+        "--num-tests", "1"
     ]
     log.info("Running: " + " ".join(cmd))
     subprocess.run(cmd, check=True)
