@@ -9,15 +9,15 @@ benchmark:
   results_dir: /workspace/benchmark-results
 
 models:
-  - name: north-mini-code
-    repo: unsloth/North-Mini-Code-1.0-GGUF
-    gguf_filter: "*UD-Q4_K_XL*"
-    alias: north-mini-code
-    server:
-      extra_args: "--temp 1.0 --top-p 0.95 -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
-    aider:
-      num_ctx: 32768
-      max_tokens: 8192
+  # - name: north-mini-code
+    # repo: unsloth/North-Mini-Code-1.0-GGUF
+    # gguf_filter: "*UD-Q4_K_XL*"
+    # alias: north-mini-code
+    # server:
+      # extra_args: "--temp 1.0 --top-p 0.95 -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
+    # aider:
+      # num_ctx: 32768
+      # max_tokens: 8192
 
   - name: devstral-small
     repo: unsloth/Devstral-Small-2-24B-Instruct-2512-GGUF
@@ -25,6 +25,66 @@ models:
     alias: devstral-small
     server:
       extra_args: "--temp 0.15 --min-p 0.01 -c 131072 -ngl 99 --jinja -fa on --parallel 4"
+    aider:
+      num_ctx: 32768
+      max_tokens: 8192
+
+  - name: qwen36-27b
+    repo: unsloth/Qwen3.6-27B-MTP-GGUF
+    gguf_filter: "*UD-Q4_K_XL*"
+    alias: qwen36-27b
+    server:
+      extra_args: "--temp 0.6 --top-p 0.95 --top-k 20 --presence-penalty 0.0 --repeat-penalty 1.0 --min-p 0.00 -c 131072 --spec-type draft-mtp --spec-draft-n-max 2 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
+    aider:
+      num_ctx: 32768
+      max_tokens: 8192
+ 
+  - name: qwen36-35b-a3b
+    repo: unsloth/Qwen3.6-35B-A3B-MTP-GGUF
+    gguf_filter: "*UD-Q4_K_XL*"
+    alias: qwen36-35b-a3b
+    server:
+      extra_args: "--temp 0.6 --top-p 0.95 --top-k 20 --presence-penalty 0.0 --repeat-penalty 1.0 --min-p 0.00 -c 131072 --spec-type draft-mtp --spec-draft-n-max 2 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
+    aider:
+      num_ctx: 32768
+      max_tokens: 8192
+
+  - name: gemma4-31b
+    repo: unsloth/gemma-4-31B-it-qat-GGUF
+    gguf_filter: "*UD-Q4_K_XL*"
+    alias: gemma4-31b
+    server:
+      extra_args: "--temp 1.0 --top-p 0.95 --top-k 64 -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
+    aider:
+      num_ctx: 32768
+      max_tokens: 8192
+
+  - name: gemma4-26b-a4b
+    repo: unsloth/gemma-4-26B-A4B-it-qat-GGUF
+    gguf_filter: "*UD-Q4_K_XL*"
+    alias: gemma4-26b-a4b
+    server:
+      extra_args: "--temp 1.0 --top-p 0.95 --top-k 64 -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
+    aider:
+      num_ctx: 32768
+      max_tokens: 8192
+
+  - name: gemma4-12b
+    repo: unsloth/gemma-4-12B-it-qat-GGUF
+    gguf_filter: "*UD-Q4_K_XL*"
+    alias: gemma4-12b
+    server:
+      extra_args: "--temp 1.0 --top-p 0.95 --top-k 64 -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
+    aider:
+      num_ctx: 32768
+      max_tokens: 8192
+
+  - name: gpt-oss-20b
+    repo: ggml-org/gpt-oss-20b-GGUF
+    gguf_filter: "gpt-oss-20b-mxfp4.gguf"
+    alias: gpt-oss-20b
+    server:
+      extra_args: "-c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on --chat-template-kwargs '{\"reasoning_effort\": \"high\"}'"
     aider:
       num_ctx: 32768
       max_tokens: 8192
