@@ -1,0 +1,30 @@
+benchmark:
+  threads: 4
+  models_dir: /workspace/models
+  benchmark_script: /workspace/aider/benchmark/benchmark.py
+  server_bin: /workspace/llama.cpp/build/bin/llama-server
+  server_health_url: http://localhost:8080/health
+  server_health_timeout: 300  # seconds
+  aider_dir: /workspace/aider
+  results_dir: /workspace/benchmark-results
+
+models:
+  - name: north-mini-code
+    repo: unsloth/North-Mini-Code-1.0-GGUF
+    gguf_filter: "*UD-Q4_K_XL*"
+    alias: north-mini-code
+    server:
+      extra_args: "--temp 1.0 --top-p 0.95 -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
+    aider:
+      num_ctx: 32768
+      max_tokens: 8192
+
+  - name: devstral-small
+    repo: unsloth/Devstral-Small-2-24B-Instruct-2512-GGUF
+    gguf_filter: "*UD-Q4_K_XL*"
+    alias: devstral-small
+    server:
+      extra_args: "--temp 0.15 --min-p 0.01 -c 131072 -ngl 99 --jinja -fa on --parallel 4"
+    aider:
+      num_ctx: 32768
+      max_tokens: 8192
