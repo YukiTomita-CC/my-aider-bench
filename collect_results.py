@@ -12,7 +12,7 @@ from pathlib import Path
 
 
 BENCHMARKS_DIR = Path("tmp.benchmarks")
-RESULTS_DIR = Path("benchmark-results")
+RESULTS_DIR = Path("/workspace/benchmark-results/results")
 
 # --stats出力でスキップすべき行の判定
 SKIP_PREFIXES = (
