@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-"""Aider ベンチマークループスクリプト
-
-使い方:
-    python run_benchmarks.py benchmark_config.yml
-"""
-
 import argparse
 import logging
 import os
@@ -19,7 +12,7 @@ from pathlib import Path
 
 import yaml
 
-# ── ログ設定 ────────────────────────────────────────────────────────────────
+# ── Logging configuration ───────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -34,13 +27,13 @@ EDIT_FORMATS = ["whole", "diff"]
 LANGUAGES = ["python", "cpp"]
 
 
-# ── 設定読み込み ─────────────────────────────────────────────────────────────
+# ── Load configuration ──────────────────────────────────────────────────────
 def load_config(path: str) -> dict:
     with open(path) as f:
         return yaml.safe_load(f)
 
 
-# ── モデルダウンロード ────────────────────────────────────────────────────────
+# ── Model download ──────────────────────────────────────────────────────────
 def download_model(repo: str, gguf_filter: str, local_dir: str) -> None:
     log.info(f"Downloading {repo}  filter={gguf_filter}")
     subprocess.run(
@@ -60,9 +53,8 @@ def find_gguf(local_dir: str) -> str:
     return str(files[0])
 
 
-# ── model_settings.yml 生成 ──────────────────────────────────────────────────
+# ── Generate model_settings.yml ─────────────────────────────────────────────
 def write_model_settings(alias: str, num_ctx: int, max_tokens: int) -> str:
-    """一時ファイルに model_settings.yml を書いてパスを返す。"""
     settings = [
         {
             "name": f"openai/{alias}",
@@ -77,7 +69,7 @@ def write_model_settings(alias: str, num_ctx: int, max_tokens: int) -> str:
     return tmp.name
 
 
-# ── llama-server 起動・待機・停止 ────────────────────────────────────────────
+# ── Start / wait for / stop llama-server ────────────────────────────────────
 def build_server_cmd(
     gguf_path: str, alias: str, server_cfg: dict, server_bin: str
 ) -> list[str]:
@@ -125,7 +117,7 @@ def stop_server(proc: subprocess.Popen) -> None:
     log.info("Server stopped.")
 
 
-# ── ベンチマーク実行 ─────────────────────────────────────────────────────────
+# ── Run benchmark ───────────────────────────────────────────────────────────
 def run_benchmark(
     suite_name: str,
     alias: str,
@@ -148,7 +140,7 @@ def run_benchmark(
     subprocess.run(cmd, check=True)
 
 
-# ── 結果をGitHubにpush ──────────────────────────────────────────────────────
+# ── Push results to GitHub ──────────────────────────────────────────────────
 def push_results(model_name: str, aider_dir: str, results_dir: str) -> None:
     log.info("Collecting results ...")
     subprocess.run([sys.executable, "collect_results.py"], cwd=aider_dir, check=True)
@@ -164,7 +156,7 @@ def push_results(model_name: str, aider_dir: str, results_dir: str) -> None:
     log.info("Push complete.")
 
 
-# ── メインループ ─────────────────────────────────────────────────────────────
+# ── Main loop ───────────────────────────────────────────────────────────────
 def main() -> None:
     parser = argparse.ArgumentParser(description="Aider benchmark loop")
     parser.add_argument("config", help="Path to config YAML")
@@ -200,22 +192,22 @@ def main() -> None:
         local_dir = os.path.join(models_dir, name)
         os.makedirs(local_dir, exist_ok=True)
 
-        # ① モデルダウンロード
+        # ① Download model
         download_model(repo, gguf_filter, local_dir)
         gguf_path = find_gguf(local_dir)
         log.info(f"GGUF: {gguf_path}")
 
-        # ② model_settings.yml を一時生成
+        # ② Generate temporary model_settings.yml
         model_settings_path = write_model_settings(
             alias, aider_cfg["num_ctx"], aider_cfg["max_tokens"]
         )
 
-        # ③ サーバー起動（finallyで確実に止める）
+        # ③ Start server (always stopped in finally block)
         proc = start_server(gguf_path, alias, server_cfg, server_bin)
         try:
             wait_for_server(health_url, health_timeout)
 
-            # ④ ベンチマークループ（whole/diff × python/cpp）
+            # ④ Benchmark loop (whole/diff × python/cpp)
             for edit_format in EDIT_FORMATS:
                 for language in LANGUAGES:
                     suite = f"{name}-{edit_format}-{language}"
@@ -231,10 +223,10 @@ def main() -> None:
             stop_server(proc)
             os.unlink(model_settings_path)
 
-        # 4通り全部成功した場合のみここに到達する
+        # Only reached if all 4 runs succeeded
         push_results(name, aider_dir, results_dir)
 
-        # ディスク節約のため使用済みGGUFを削除（常に1ファイルだけ存在する状態にする）
+        # Delete used GGUF to save disk space (keep only one file at a time)
         log.info(f"Deleting GGUF: {gguf_path}")
         os.unlink(gguf_path)
 
