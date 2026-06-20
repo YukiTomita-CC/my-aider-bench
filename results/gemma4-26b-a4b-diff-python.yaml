@@ -1,0 +1,27 @@
+- dirname: 2026-06-20-21-13-43--gemma4-26b-a4b-diff-python
+  test_cases: 34
+  model: openai/gemma4-26b-a4b
+  edit_format: diff
+  commit_hash: 5dc9490-dirty
+  pass_rate_1: 2.9
+  pass_rate_2: 8.8
+  pass_num_1: 1
+  pass_num_2: 3
+  percent_cases_well_formed: 100.0
+  error_outputs: 61
+  num_malformed_responses: 0
+  num_with_malformed_responses: 0
+  user_asks: 61
+  lazy_comments: 0
+  syntax_errors: 0
+  indentation_errors: 0
+  exhausted_context_windows: 61
+  prompt_tokens: 22837
+  completion_tokens: 29145
+  test_timeouts: 0
+  total_tests: 225
+  command: aider --model openai/gemma4-26b-a4b
+  date: 2026-06-20
+  versions: 0.86.3.dev
+  seconds_per_case: 279.3
+  total_cost: 0.0000
