@@ -47,10 +47,11 @@ def download_model(repo: str, gguf_filter: str, local_dir: str) -> None:
 
 
 def find_gguf(local_dir: str) -> str:
-    files = list(Path(local_dir).rglob("*.gguf"))
+    files = sorted(Path(local_dir).rglob("*.gguf"))
     if not files:
         raise FileNotFoundError(f"No .gguf file found under {local_dir}")
-    return str(files[0])
+    first_shards = [f for f in files if "00001-of-" in f.name]
+    return str(first_shards[0] if first_shards else files[0])
 
 
 # ── Generate model_settings.yml ─────────────────────────────────────────────
@@ -152,6 +153,7 @@ def push_results(model_name: str, aider_dir: str, results_dir: str) -> None:
         cwd=results_dir,
         check=True,
     )
+    subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=results_dir, check=True)
     subprocess.run(["git", "push"], cwd=results_dir, check=True)
     log.info("Push complete.")
 
