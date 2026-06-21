@@ -38,7 +38,7 @@ models:
     # aider:
       # num_ctx: 32768
       # max_tokens: 8192
- 
+
   # - name: qwen36-35b-a3b
     # repo: unsloth/Qwen3.6-35B-A3B-MTP-GGUF
     # gguf_filter: "*UD-Q4_K_XL*"
@@ -108,8 +108,8 @@ models:
     aider:
       num_ctx: 32768
       max_tokens: 8192
- 
-   - name: glm47-flash
+
+  - name: glm47-flash
     repo: unsloth/GLM-4.7-Flash-GGUF
     gguf_filter: "*UD-Q4_K_XL*"
     alias: glm47-flash
