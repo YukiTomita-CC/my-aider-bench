@@ -1,0 +1,25 @@
+2026-06-21 15:01:31,554 [INFO] Total runs: 12  (3 models × 2 formats × 2 languages)
+2026-06-21 15:01:31,554 [INFO] Downloading unsloth/Qwen3-Coder-Next-GGUF  filter=*UD-Q4_K_XL*
+2026-06-21 15:05:35,513 [INFO] GGUF: /workspace/models/qwen3-coder-next/Qwen3-Coder-Next-UD-Q4_K_XL.gguf
+2026-06-21 15:05:35,516 [INFO] Starting llama-server  log=server_qwen3-coder-next.log
+2026-06-21 15:05:35,517 [INFO] Waiting for server at http://localhost:8080/health  timeout=300s ...
+2026-06-21 15:05:51,490 [INFO] Server is ready.
+2026-06-21 15:05:51,490 [INFO] ============================================================
+2026-06-21 15:05:51,490 [INFO] Suite: qwen3-coder-next-whole-python
+2026-06-21 15:05:51,490 [INFO] ============================================================
+2026-06-21 15:05:51,491 [INFO] Running: /usr/bin/python /workspace/aider/benchmark/benchmark.py qwen3-coder-next-whole-python --model openai/qwen3-coder-next --edit-format whole --threads 4 --languages python --read-model-settings /tmp/model_settings_2wgd4t34.yml
+2026-06-21 15:20:10,907 [INFO] ============================================================
+2026-06-21 15:20:10,907 [INFO] Suite: qwen3-coder-next-whole-cpp
+2026-06-21 15:20:10,907 [INFO] ============================================================
+2026-06-21 15:20:10,907 [INFO] Running: /usr/bin/python /workspace/aider/benchmark/benchmark.py qwen3-coder-next-whole-cpp --model openai/qwen3-coder-next --edit-format whole --threads 4 --languages cpp --read-model-settings /tmp/model_settings_2wgd4t34.yml
+2026-06-21 16:07:29,280 [INFO] ============================================================
+2026-06-21 16:07:29,281 [INFO] Suite: qwen3-coder-next-diff-python
+2026-06-21 16:07:29,281 [INFO] ============================================================
+2026-06-21 16:07:29,281 [INFO] Running: /usr/bin/python /workspace/aider/benchmark/benchmark.py qwen3-coder-next-diff-python --model openai/qwen3-coder-next --edit-format diff --threads 4 --languages python --read-model-settings /tmp/model_settings_2wgd4t34.yml
+2026-06-21 16:25:29,675 [INFO] ============================================================
+2026-06-21 16:25:29,675 [INFO] Suite: qwen3-coder-next-diff-cpp
+2026-06-21 16:25:29,675 [INFO] ============================================================
+2026-06-21 16:25:29,676 [INFO] Running: /usr/bin/python /workspace/aider/benchmark/benchmark.py qwen3-coder-next-diff-cpp --model openai/qwen3-coder-next --edit-format diff --threads 4 --languages cpp --read-model-settings /tmp/model_settings_2wgd4t34.yml
+2026-06-21 17:11:19,714 [INFO] Stopping llama-server ...
+2026-06-21 17:11:20,980 [INFO] Server stopped.
+2026-06-21 17:11:20,981 [INFO] Collecting results ...

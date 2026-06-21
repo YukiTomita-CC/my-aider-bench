@@ -1,0 +1,27 @@
+- dirname: 2026-06-21-15-20-12--qwen3-coder-next-whole-cpp
+  test_cases: 26
+  model: openai/qwen3-coder-next
+  edit_format: whole
+  commit_hash: 02845c5
+  pass_rate_1: 23.1
+  pass_rate_2: 61.5
+  pass_num_1: 6
+  pass_num_2: 16
+  percent_cases_well_formed: 100.0
+  error_outputs: 9
+  num_malformed_responses: 0
+  num_with_malformed_responses: 0
+  user_asks: 152
+  lazy_comments: 0
+  syntax_errors: 0
+  indentation_errors: 0
+  exhausted_context_windows: 7
+  prompt_tokens: 941467
+  completion_tokens: 152925
+  test_timeouts: 0
+  total_tests: 225
+  command: aider --model openai/qwen3-coder-next
+  date: 2026-06-21
+  versions: 
+  seconds_per_case: 389.0
+  total_cost: 0.0000
