@@ -114,7 +114,7 @@ models:
     gguf_filter: "*UD-Q4_K_XL*"
     alias: glm47-flash
     server:
-      extra_args: "--temp 1.0 --top-p 0.95 --min-p 0.01 --repeat-penalty 1.0 -c 131072 -ngl 99 --jinja --chat-template-file /workspace/benchmark-results/nex-n2-mini-think-fix.jinja -fa on --parallel 4 --reasoning on"
+      extra_args: "--temp 1.0 --top-p 0.95 --min-p 0.01 --repeat-penalty 1.0 -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
     aider:
       num_ctx: 32768
       max_tokens: 8192
