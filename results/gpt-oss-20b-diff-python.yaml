@@ -1,0 +1,27 @@
+- dirname: 2026-06-21-03-40-12--gpt-oss-20b-diff-python
+  test_cases: 34
+  model: openai/gpt-oss-20b
+  edit_format: diff
+  commit_hash: 5dc9490-dirty
+  pass_rate_1: 0.0
+  pass_rate_2: 0.0
+  pass_num_1: 0
+  pass_num_2: 0
+  percent_cases_well_formed: 100.0
+  error_outputs: 63
+  num_malformed_responses: 0
+  num_with_malformed_responses: 0
+  user_asks: 63
+  lazy_comments: 0
+  syntax_errors: 0
+  indentation_errors: 0
+  exhausted_context_windows: 63
+  prompt_tokens: 21608
+  completion_tokens: 28803
+  test_timeouts: 0
+  total_tests: 225
+  command: aider --model openai/gpt-oss-20b
+  date: 2026-06-21
+  versions: 0.86.3.dev
+  seconds_per_case: 245.8
+  total_cost: 0.0000

@@ -1,0 +1,27 @@
+- dirname: 2026-06-21-03-06-38--gpt-oss-20b-whole-cpp
+  test_cases: 26
+  model: openai/gpt-oss-20b
+  edit_format: whole
+  commit_hash: 5dc9490-dirty
+  pass_rate_1: 0.0
+  pass_rate_2: 3.8
+  pass_num_1: 0
+  pass_num_2: 1
+  percent_cases_well_formed: 100.0
+  error_outputs: 50
+  num_malformed_responses: 0
+  num_with_malformed_responses: 0
+  user_asks: 57
+  lazy_comments: 0
+  syntax_errors: 0
+  indentation_errors: 0
+  exhausted_context_windows: 50
+  prompt_tokens: 28165
+  completion_tokens: 45947
+  test_timeouts: 0
+  total_tests: 225
+  command: aider --model openai/gpt-oss-20b
+  date: 2026-06-21
+  versions: 0.86.3.dev
+  seconds_per_case: 288.4
+  total_cost: 0.0000
