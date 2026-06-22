@@ -1,27 +1,27 @@
-- dirname: 2026-06-22-07-41-46--claude-sonnet-4-5-cpp
+- dirname: 2026-06-22-11-13-20--claude-sonnet-4-5-cpp
   test_cases: 26
-  model: anthropic/claude-sonnet-4.5
-  edit_format: whole
+  model: anthropic/claude-sonnet-4-5-20250929
+  edit_format: diff
   commit_hash: 5dc9490-dirty
-  pass_rate_1: 0.0
-  pass_rate_2: 0.0
-  pass_num_1: 0
-  pass_num_2: 0
+  pass_rate_1: 26.9
+  pass_rate_2: 88.5
+  pass_num_1: 7
+  pass_num_2: 23
   percent_cases_well_formed: 100.0
-  error_outputs: 52
+  error_outputs: 0
   num_malformed_responses: 0
   num_with_malformed_responses: 0
-  user_asks: 0
+  user_asks: 85
   lazy_comments: 0
   syntax_errors: 0
   indentation_errors: 0
   exhausted_context_windows: 0
-  prompt_tokens: 0
-  completion_tokens: 0
-  test_timeouts: 0
+  prompt_tokens: 2911297
+  completion_tokens: 62994
+  test_timeouts: 1
   total_tests: 225
-  command: aider --model anthropic/claude-sonnet-4.5
+  command: aider --model anthropic/claude-sonnet-4-5-20250929
   date: 2026-06-22
   versions: 0.86.3.dev
-  seconds_per_case: 0.5
-  total_cost: 0.0000
+  seconds_per_case: 46.4
+  total_cost: 6.6618
