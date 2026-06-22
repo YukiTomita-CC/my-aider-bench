@@ -1,0 +1,27 @@
+- dirname: 2026-06-22-07-07-09--gemini-2.5-flash-cpp
+  test_cases: 26
+  model: gemini/gemini-2.5-flash
+  edit_format: diff-fenced
+  commit_hash: 5dc9490-dirty
+  pass_rate_1: 7.7
+  pass_rate_2: 46.2
+  pass_num_1: 2
+  pass_num_2: 12
+  percent_cases_well_formed: 88.5
+  error_outputs: 12
+  num_malformed_responses: 12
+  num_with_malformed_responses: 3
+  user_asks: 58
+  lazy_comments: 0
+  syntax_errors: 0
+  indentation_errors: 0
+  exhausted_context_windows: 0
+  prompt_tokens: 2894573
+  completion_tokens: 275751
+  test_timeouts: 1
+  total_tests: 225
+  command: aider --model gemini/gemini-2.5-flash
+  date: 2026-06-22
+  versions: 0.86.3.dev
+  seconds_per_case: 61.7
+  total_cost: 1.3043

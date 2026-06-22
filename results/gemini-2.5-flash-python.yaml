@@ -1,0 +1,27 @@
+- dirname: 2026-06-22-06-33-43--gemini-2.5-flash-python
+  test_cases: 34
+  model: gemini/gemini-2.5-flash
+  edit_format: diff-fenced
+  commit_hash: 5dc9490-dirty
+  pass_rate_1: 29.4
+  pass_rate_2: 67.6
+  pass_num_1: 10
+  pass_num_2: 23
+  percent_cases_well_formed: 100.0
+  error_outputs: 0
+  num_malformed_responses: 0
+  num_with_malformed_responses: 0
+  user_asks: 1
+  lazy_comments: 0
+  syntax_errors: 0
+  indentation_errors: 0
+  exhausted_context_windows: 0
+  prompt_tokens: 314334
+  completion_tokens: 364982
+  test_timeouts: 1
+  total_tests: 225
+  command: aider --model gemini/gemini-2.5-flash
+  date: 2026-06-22
+  versions: 0.86.3.dev
+  seconds_per_case: 51.0
+  total_cost: 0.9932
