@@ -1,0 +1,27 @@
+- dirname: 2026-06-22-07-43-45--claude-haiku-4-5-python
+  test_cases: 34
+  model: anthropic/claude-haiku-4-5-20251001
+  edit_format: diff
+  commit_hash: 5dc9490-dirty
+  pass_rate_1: 8.8
+  pass_rate_2: 50.0
+  pass_num_1: 3
+  pass_num_2: 17
+  percent_cases_well_formed: 94.1
+  error_outputs: 2
+  num_malformed_responses: 2
+  num_with_malformed_responses: 2
+  user_asks: 0
+  lazy_comments: 0
+  syntax_errors: 0
+  indentation_errors: 0
+  exhausted_context_windows: 0
+  prompt_tokens: 462722
+  completion_tokens: 74566
+  test_timeouts: 1
+  total_tests: 225
+  command: aider --model anthropic/claude-haiku-4-5-20251001
+  date: 2026-06-22
+  versions: 0.86.3.dev
+  seconds_per_case: 14.8
+  total_cost: 0.7812
