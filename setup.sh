@@ -30,6 +30,8 @@ echo "========================================"
 # GitHub credentials
 git config --global credential.helper store
 echo "https://${GITHUB_USER}:${GITHUB_PAT}@github.com" > ~/.git-credentials
+git config --global user.email "${GIT_USER_EMAIL}"
+git config --global user.name "${GIT_USER_NAME}"
 echo "✔ git credentials configured"
 
 # Install dependencies
@@ -62,6 +64,7 @@ echo "========================================"
 cd /workspace
 git clone https://github.com/Aider-AI/aider.git
 cd aider
+git checkout 5dc9490bb35f9729ef2c95d00a19ccd30c26339c
 
 echo "→ Patching benchmark.py paths..."
 sed -i \
@@ -73,6 +76,7 @@ mkdir -p tmp.benchmarks
 
 echo "→ Cloning polyglot-benchmark..."
 git clone https://github.com/Aider-AI/polyglot-benchmark.git tmp.benchmarks/polyglot-benchmark
+git -C tmp.benchmarks/polyglot-benchmark checkout 7e0611e77b54e2dea774cdc0aa00cf9f7ed6144f
 
 echo "→ Installing aider[dev]..."
 pip install -e ".[dev]"
@@ -85,6 +89,7 @@ echo "========================================"
 
 cd /workspace
 git clone https://github.com/YukiTomita-CC/my-aider-bench.git benchmark-results
+cp /workspace/benchmark-results/collect_results.py /workspace/aider/
 echo "✔ benchmark-results cloned"
 
 echo ""
