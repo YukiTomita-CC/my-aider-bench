@@ -1,27 +1,27 @@
-- dirname: 2026-06-19-15-19-23--north-mini-code-diff-python
-  test_cases: 1
+- dirname: 2026-06-19-08-08-58--north-diff-python
+  test_cases: 34
   model: openai/north-mini-code
   edit_format: diff
-  commit_hash: 5dc9490-dirty
-  pass_rate_1: 0.0
-  pass_rate_2: 0.0
-  pass_num_1: 0
-  pass_num_2: 0
-  percent_cases_well_formed: 100.0
-  error_outputs: 1
-  num_malformed_responses: 0
-  num_with_malformed_responses: 0
-  user_asks: 1
-  lazy_comments: 0
+  commit_hash: 5dc9490
+  pass_rate_1: 8.8
+  pass_rate_2: 20.6
+  pass_num_1: 3
+  pass_num_2: 7
+  percent_cases_well_formed: 97.1
+  error_outputs: 34
+  num_malformed_responses: 4
+  num_with_malformed_responses: 1
+  user_asks: 30
+  lazy_comments: 1
   syntax_errors: 0
   indentation_errors: 0
-  exhausted_context_windows: 1
-  prompt_tokens: 2588
-  completion_tokens: 2307
+  exhausted_context_windows: 30
+  prompt_tokens: 163958
+  completion_tokens: 137330
   test_timeouts: 0
   total_tests: 225
   command: aider --model openai/north-mini-code
   date: 2026-06-19
   versions: 0.86.3.dev
-  seconds_per_case: 88.0
+  seconds_per_case: 227.5
   total_cost: 0.0000
