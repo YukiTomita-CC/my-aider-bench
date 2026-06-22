@@ -1,0 +1,111 @@
+- dirname: 2026-06-21-15-05-52--qwen3-coder-next-whole-python
+  test_cases: 34
+  model: openai/qwen3-coder-next
+  edit_format: whole
+  commit_hash: 02845c5
+  pass_rate_1: 44.1
+  pass_rate_2: 79.4
+  pass_num_1: 15
+  pass_num_2: 27
+  percent_cases_well_formed: 100.0
+  error_outputs: 3
+  num_malformed_responses: 0
+  num_with_malformed_responses: 0
+  user_asks: 20
+  lazy_comments: 0
+  syntax_errors: 0
+  indentation_errors: 0
+  exhausted_context_windows: 3
+  prompt_tokens: 135930
+  completion_tokens: 56800
+  test_timeouts: 0
+  total_tests: 225
+  command: aider --model openai/qwen3-coder-next
+  date: 2026-06-21
+  versions: 
+  seconds_per_case: 91.4
+  total_cost: 0.0000
+
+- dirname: 2026-06-21-15-20-12--qwen3-coder-next-whole-cpp
+  test_cases: 26
+  model: openai/qwen3-coder-next
+  edit_format: whole
+  commit_hash: 02845c5
+  pass_rate_1: 23.1
+  pass_rate_2: 61.5
+  pass_num_1: 6
+  pass_num_2: 16
+  percent_cases_well_formed: 100.0
+  error_outputs: 9
+  num_malformed_responses: 0
+  num_with_malformed_responses: 0
+  user_asks: 152
+  lazy_comments: 0
+  syntax_errors: 0
+  indentation_errors: 0
+  exhausted_context_windows: 7
+  prompt_tokens: 941467
+  completion_tokens: 152925
+  test_timeouts: 0
+  total_tests: 225
+  command: aider --model openai/qwen3-coder-next
+  date: 2026-06-21
+  versions: 
+  seconds_per_case: 389.0
+  total_cost: 0.0000
+
+- dirname: 2026-06-21-16-07-30--qwen3-coder-next-diff-python
+  test_cases: 34
+  model: openai/qwen3-coder-next
+  edit_format: diff
+  commit_hash: 02845c5
+  pass_rate_1: 44.1
+  pass_rate_2: 76.5
+  pass_num_1: 15
+  pass_num_2: 26
+  percent_cases_well_formed: 97.1
+  error_outputs: 5
+  num_malformed_responses: 1
+  num_with_malformed_responses: 1
+  user_asks: 5
+  lazy_comments: 0
+  syntax_errors: 0
+  indentation_errors: 0
+  exhausted_context_windows: 4
+  prompt_tokens: 185828
+  completion_tokens: 60923
+  test_timeouts: 0
+  total_tests: 225
+  command: aider --model openai/qwen3-coder-next
+  date: 2026-06-21
+  versions: 
+  seconds_per_case: 117.4
+  total_cost: 0.0000
+
+- dirname: 2026-06-21-16-25-30--qwen3-coder-next-diff-cpp
+  test_cases: 26
+  model: openai/qwen3-coder-next
+  edit_format: diff
+  commit_hash: 02845c5
+  pass_rate_1: 19.2
+  pass_rate_2: 65.4
+  pass_num_1: 5
+  pass_num_2: 17
+  percent_cases_well_formed: 96.2
+  error_outputs: 18
+  num_malformed_responses: 1
+  num_with_malformed_responses: 1
+  user_asks: 91
+  lazy_comments: 0
+  syntax_errors: 0
+  indentation_errors: 0
+  exhausted_context_windows: 17
+  prompt_tokens: 755047
+  completion_tokens: 124182
+  test_timeouts: 0
+  total_tests: 225
+  command: aider --model openai/qwen3-coder-next
+  date: 2026-06-21
+  versions: 
+  seconds_per_case: 397.8
+  total_cost: 0.0000

@@ -89,7 +89,7 @@ echo "========================================"
 
 cd /workspace
 git clone https://github.com/YukiTomita-CC/my-aider-bench.git benchmark-results
-cp /workspace/benchmark-results/collect_results.py /workspace/aider/
+cp /workspace/benchmark-results/utils/collect_results.py /workspace/aider/
 echo "✔ benchmark-results cloned"
 
 echo ""
