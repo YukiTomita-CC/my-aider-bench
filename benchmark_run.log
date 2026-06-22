@@ -23,3 +23,34 @@
 2026-06-21 17:11:19,714 [INFO] Stopping llama-server ...
 2026-06-21 17:11:20,980 [INFO] Server stopped.
 2026-06-21 17:11:20,981 [INFO] Collecting results ...
+2026-06-21 20:51:46,218 [INFO] Total runs: 8  (2 models × 2 formats × 2 languages)
+2026-06-21 20:51:46,218 [INFO] Downloading ggml-org/gpt-oss-120b-GGUF  filter=gpt-oss-120b-mxfp4-00001-of-*
+2026-06-21 20:51:47,953 [INFO] GGUF: /workspace/models/gpt-oss-120b/gpt-oss-120b-mxfp4-00001-of-00003.gguf
+2026-06-21 20:51:47,954 [INFO] Starting llama-server  log=server_gpt-oss-120b.log
+2026-06-21 20:51:47,955 [INFO] Waiting for server at http://localhost:8080/health  timeout=300s ...
+2026-06-21 20:53:47,630 [INFO] Total runs: 8  (2 models × 2 formats × 2 languages)
+2026-06-21 20:53:47,630 [INFO] Downloading ggml-org/gpt-oss-120b-GGUF  filter=gpt-oss-120b-mxfp4-*
+2026-06-21 20:58:27,762 [INFO] GGUF: /workspace/models/gpt-oss-120b/gpt-oss-120b-mxfp4-00001-of-00003.gguf
+2026-06-21 20:58:27,763 [INFO] Starting llama-server  log=server_gpt-oss-120b.log
+2026-06-21 20:58:27,764 [INFO] Waiting for server at http://localhost:8080/health  timeout=300s ...
+2026-06-21 20:58:46,087 [INFO] Server is ready.
+2026-06-21 20:58:46,088 [INFO] ============================================================
+2026-06-21 20:58:46,088 [INFO] Suite: gpt-oss-120b-whole-python
+2026-06-21 20:58:46,088 [INFO] ============================================================
+2026-06-21 20:58:46,088 [INFO] Running: /usr/bin/python /workspace/aider/benchmark/benchmark.py gpt-oss-120b-whole-python --model openai/gpt-oss-120b --edit-format whole --threads 4 --languages python --read-model-settings /tmp/model_settings_y9hc3t5c.yml
+2026-06-21 21:44:40,335 [INFO] ============================================================
+2026-06-21 21:44:40,335 [INFO] Suite: gpt-oss-120b-whole-cpp
+2026-06-21 21:44:40,335 [INFO] ============================================================
+2026-06-21 21:44:40,335 [INFO] Running: /usr/bin/python /workspace/aider/benchmark/benchmark.py gpt-oss-120b-whole-cpp --model openai/gpt-oss-120b --edit-format whole --threads 4 --languages cpp --read-model-settings /tmp/model_settings_y9hc3t5c.yml
+2026-06-21 22:52:36,400 [INFO] ============================================================
+2026-06-21 22:52:36,400 [INFO] Suite: gpt-oss-120b-diff-python
+2026-06-21 22:52:36,400 [INFO] ============================================================
+2026-06-21 22:52:36,400 [INFO] Running: /usr/bin/python /workspace/aider/benchmark/benchmark.py gpt-oss-120b-diff-python --model openai/gpt-oss-120b --edit-format diff --threads 4 --languages python --read-model-settings /tmp/model_settings_y9hc3t5c.yml
+2026-06-21 23:37:24,420 [INFO] ============================================================
+2026-06-21 23:37:24,420 [INFO] Suite: gpt-oss-120b-diff-cpp
+2026-06-21 23:37:24,420 [INFO] ============================================================
+2026-06-21 23:37:24,420 [INFO] Running: /usr/bin/python /workspace/aider/benchmark/benchmark.py gpt-oss-120b-diff-cpp --model openai/gpt-oss-120b --edit-format diff --threads 4 --languages cpp --read-model-settings /tmp/model_settings_y9hc3t5c.yml
+2026-06-22 00:32:10,851 [INFO] Stopping llama-server ...
+2026-06-22 00:32:12,168 [INFO] Server stopped.
+2026-06-22 00:32:12,169 [INFO] Collecting results ...
+2026-06-22 00:32:23,347 [INFO] Pushing results to GitHub ...

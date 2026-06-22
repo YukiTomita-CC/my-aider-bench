@@ -1,0 +1,27 @@
+- dirname: 2026-06-21-23-37-25--gpt-oss-120b-diff-cpp
+  test_cases: 26
+  model: openai/gpt-oss-120b
+  edit_format: diff
+  commit_hash: e39ee47-dirty
+  pass_rate_1: 3.8
+  pass_rate_2: 30.8
+  pass_num_1: 1
+  pass_num_2: 8
+  percent_cases_well_formed: 100.0
+  error_outputs: 41
+  num_malformed_responses: 0
+  num_with_malformed_responses: 0
+  user_asks: 65
+  lazy_comments: 0
+  syntax_errors: 0
+  indentation_errors: 0
+  exhausted_context_windows: 41
+  prompt_tokens: 140270
+  completion_tokens: 131808
+  test_timeouts: 0
+  total_tests: 225
+  command: aider --model openai/gpt-oss-120b
+  date: 2026-06-21
+  versions: 
+  seconds_per_case: 472.3
+  total_cost: 0.0000
