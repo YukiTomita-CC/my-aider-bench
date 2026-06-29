@@ -1,6 +1,6 @@
-- dirname: 2026-06-21-18-32-35--gemma4-31b-whole-python
+- dirname: 2026-06-21-18-32-35--gemma4-31b-no-think-whole-python
   test_cases: 34
-  model: openai/gemma4-31b
+  model: openai/gemma4-31b-no-think
   edit_format: whole
   commit_hash: 5dc9490-dirty
   pass_rate_1: 8.8
@@ -20,15 +20,15 @@
   completion_tokens: 55999
   test_timeouts: 1
   total_tests: 225
-  command: aider --model openai/gemma4-31b
+  command: aider --model openai/gemma4-31b-no-think
   date: 2026-06-21
   versions: 0.86.3.dev
   seconds_per_case: 176.0
   total_cost: 0.0000
 
-- dirname: 2026-06-21-19-01-14--gemma4-31b-whole-cpp
+- dirname: 2026-06-21-19-01-14--gemma4-31b-no-think-whole-cpp
   test_cases: 26
-  model: openai/gemma4-31b
+  model: openai/gemma4-31b-no-think
   edit_format: whole
   commit_hash: 5dc9490-dirty
   pass_rate_1: 7.7
@@ -48,15 +48,15 @@
   completion_tokens: 59670
   test_timeouts: 0
   total_tests: 225
-  command: aider --model openai/gemma4-31b
+  command: aider --model openai/gemma4-31b-no-think
   date: 2026-06-21
   versions: 0.86.3.dev
   seconds_per_case: 344.9
   total_cost: 0.0000
 
-- dirname: 2026-06-21-19-42-09--gemma4-31b-diff-python
+- dirname: 2026-06-21-19-42-09--gemma4-31b-no-think-diff-python
   test_cases: 34
-  model: openai/gemma4-31b
+  model: openai/gemma4-31b-no-think
   edit_format: diff
   commit_hash: 5dc9490-dirty
   pass_rate_1: 5.9
@@ -76,15 +76,15 @@
   completion_tokens: 54431
   test_timeouts: 0
   total_tests: 225
-  command: aider --model openai/gemma4-31b
+  command: aider --model openai/gemma4-31b-no-think
   date: 2026-06-21
   versions: 0.86.3.dev
   seconds_per_case: 194.3
   total_cost: 0.0000
 
-- dirname: 2026-06-21-20-13-25--gemma4-31b-diff-cpp
+- dirname: 2026-06-21-20-13-25--gemma4-31b-no-think-diff-cpp
   test_cases: 26
-  model: openai/gemma4-31b
+  model: openai/gemma4-31b-no-think
   edit_format: diff
   commit_hash: 5dc9490-dirty
   pass_rate_1: 7.7
@@ -104,7 +104,7 @@
   completion_tokens: 54302
   test_timeouts: 0
   total_tests: 225
-  command: aider --model openai/gemma4-31b
+  command: aider --model openai/gemma4-31b-no-think
   date: 2026-06-21
   versions: 0.86.3.dev
   seconds_per_case: 368.7
