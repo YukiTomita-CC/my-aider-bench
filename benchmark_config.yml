@@ -169,40 +169,50 @@ models:
       # num_ctx: 32768
       # max_tokens: 8192
 
-  - name: ornith-35b-q4
-    repo: deepreinforce-ai/Ornith-1.0-35B-GGUF
+  # - name: ornith-35b-q4
+  #   repo: deepreinforce-ai/Ornith-1.0-35B-GGUF
+  #   gguf_filter: "*Q4_K_M*"
+  #   alias: ornith-35b-q4
+  #   server:
+  #     extra_args: "--temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.0 --presence-penalty 0.0 --repeat-penalty 1.0 --chat-template-kwargs '{\"preserve_thinking\": true}' -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
+  #   aider:
+  #     num_ctx: 32768
+  #     max_tokens: 8192
+
+  # - name: ornith-35b-q5
+  #   repo: deepreinforce-ai/Ornith-1.0-35B-GGUF
+  #   gguf_filter: "*Q5_K_M*"
+  #   alias: ornith-35b-q5
+  #   server:
+  #     extra_args: "--temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.0 --presence-penalty 0.0 --repeat-penalty 1.0 --chat-template-kwargs '{\"preserve_thinking\": true}' -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
+  #   aider:
+  #     num_ctx: 32768
+  #     max_tokens: 8192
+
+  # - name: ornith-35b-q6
+  #   repo: deepreinforce-ai/Ornith-1.0-35B-GGUF
+  #   gguf_filter: "*Q6_K*"
+  #   alias: ornith-35b-q6
+  #   server:
+  #     extra_args: "--temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.0 --presence-penalty 0.0 --repeat-penalty 1.0 --chat-template-kwargs '{\"preserve_thinking\": true}' -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
+  #   aider:
+  #     num_ctx: 32768
+  #     max_tokens: 8192
+
+  # - name: ornith-35b-q8
+  #   repo: deepreinforce-ai/Ornith-1.0-35B-GGUF
+  #   gguf_filter: "*Q8*"
+  #   alias: ornith-35b-q8
+  #   server:
+  #     extra_args: "--temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.0 --presence-penalty 0.0 --repeat-penalty 1.0 --chat-template-kwargs '{\"preserve_thinking\": true}' -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
+  #   aider:
+  #     num_ctx: 32768
+  #     max_tokens: 8192
+
+  - name: ornith-35b-bartowski
+    repo: bartowski/deepreinforce-ai_Ornith-1.0-35B-GGUF
     gguf_filter: "*Q4_K_M*"
-    alias: ornith-35b-q4
-    server:
-      extra_args: "--temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.0 --presence-penalty 0.0 --repeat-penalty 1.0 --chat-template-kwargs '{\"preserve_thinking\": true}' -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
-    aider:
-      num_ctx: 32768
-      max_tokens: 8192
-
-  - name: ornith-35b-q5
-    repo: deepreinforce-ai/Ornith-1.0-35B-GGUF
-    gguf_filter: "*Q5_K_M*"
-    alias: ornith-35b-q5
-    server:
-      extra_args: "--temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.0 --presence-penalty 0.0 --repeat-penalty 1.0 --chat-template-kwargs '{\"preserve_thinking\": true}' -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
-    aider:
-      num_ctx: 32768
-      max_tokens: 8192
-
-  - name: ornith-35b-q6
-    repo: deepreinforce-ai/Ornith-1.0-35B-GGUF
-    gguf_filter: "*Q6_K*"
-    alias: ornith-35b-q6
-    server:
-      extra_args: "--temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.0 --presence-penalty 0.0 --repeat-penalty 1.0 --chat-template-kwargs '{\"preserve_thinking\": true}' -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
-    aider:
-      num_ctx: 32768
-      max_tokens: 8192
-
-  - name: ornith-35b-q8
-    repo: deepreinforce-ai/Ornith-1.0-35B-GGUF
-    gguf_filter: "*Q8*"
-    alias: ornith-35b-q8
+    alias: ornith-35b-bartowski
     server:
       extra_args: "--temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.0 --presence-penalty 0.0 --repeat-penalty 1.0 --chat-template-kwargs '{\"preserve_thinking\": true}' -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
     aider:
