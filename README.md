@@ -147,11 +147,12 @@ Make sure to set the following environment variables inside the container:
 - AIDER_BENCHMARK_DIR=/workspace/aider/tmp.benchmarks
 - OPENAI_API_BASE=http://localhost:8080/v1
 - OPENAI_API_KEY=dummy
-- GitHub_UserID=yours
-- GitHub_PAT=yours
+- GITHUB_USER=yours
+- GITHUB_PAT=yours
 - GIT_USER_EMAIL=yours
 - GIT_USER_NAME=yours
 
+Use a fine-grained PAT with the minimum required scope and a short expiration.
 Also, update line 91 of `setup.sh` to match your forked repository name.
 
 To change the target languages, edit the list on line 27 of `run_benchmarks.py`.
