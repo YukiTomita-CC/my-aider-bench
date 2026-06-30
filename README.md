@@ -6,7 +6,7 @@ I'm an indie developer who recently started using Aider. Since the official Aide
 
 ## TL;DR
 
-As of 2026/06/29, the models I'm currently using are:
+As of 2026/06/30, the models I'm currently using are:
 - Everyday use: Qwen3.6-35B-A3B (unsloth/Qwen3.6-35B-A3B-MTP-GGUF:UD-Q4_K_XL)
 - Tough tasks: Qwen3.6-27B (unsloth/Qwen3.6-27B-MTP-GGUF:UD-Q4_K_XL)
 
@@ -27,6 +27,8 @@ A summary of `results.csv` is shown below. In most cases, open-weight models ten
 | gemini/gemini-3-flash-preview                                 | diff-fenced | 50.0   | 84.6   |
 | llama.cpp/Qwen3.6-27B                                         | whole       | 30.8   | 84.6   |
 | openai/gpt-5-mini                                             | diff        | 15.4   | 73.1   |
+| llama.cpp/Ornith-1.0-35B(bartowski)                           | diff        | 23.1   | 73.1   |
+| llama.cpp/Ornith-1.0-35B(bartowski)                           | whole       | 26.9   | 73.1   |
 | llama.cpp/Ornith-1.0-35B                                      | whole       | 34.6   | 73.1   |
 | llama.cpp/Qwen3.6-27B                                         | diff        | 23.1   | 69.2   |
 | llama.cpp/Qwen3.6-35B-A3B                                     | whole       | 23.1   | 69.2   |
@@ -44,8 +46,10 @@ A summary of `results.csv` is shown below. In most cases, open-weight models ten
 | llama.cpp/gemma-4-31B-it(no think)                            | diff        | 7.7    | 42.3   |
 | llama.cpp/gemma-4-31B-it(no think)                            | whole       | 7.7    | 34.6   |
 | llama.cpp/gpt-oss-120b                                        | diff        | 3.8    | 30.8   |
+| llama.cpp/Qwythos-9B-Claude-Mythos-5                          | diff        | 0.0    | 26.9   |
 | llama.cpp/gpt-oss-120b                                        | whole       | 0.0    | 23.1   |
 | llama.cpp/North-Mini-Code-1.0                                 | whole       | 0.0    | 23.1   |
+| llama.cpp/Qwythos-9B-Claude-Mythos-5                          | whole       | 0.0    | 23.1   |
 | llama.cpp/Devstral-Small-2-24B-Instruct-2512                  | diff        | 3.8    | 23.1   |
 | llama.cpp/GLM-4.7-Flash                                       | whole       | 0.0    | 19.2   |
 | llama.cpp/Nex-N2-mini(fix chat-template)                      | whole       | 7.7    | 19.2   |
@@ -80,21 +84,25 @@ A summary of `results.csv` is shown below. In most cases, open-weight models ten
 | gemini/gemini-2.5-flash                                       | diff-fenced | 29.4   | 67.6   |
 | llama.cpp/gemma-4-31B-it                                      | whole       | 14.7   | 64.7   |
 | llama.cpp/Qwen3.6-27B                                         | diff        | 44.1   | 61.8   |
+| llama.cpp/Ornith-1.0-35B(bartowski)                           | diff        | 32.4   | 61.8   |
 | llama.cpp/Qwen3.6-35B-A3B                                     | diff        | 32.4   | 58.8   |
 | llama.cpp/Qwen3.6-35B-A3B                                     | whole       | 41.2   | 58.8   |
 | llama.cpp/Ornith-1.0-35B                                      | whole       | 26.5   | 58.8   |
 | llama.cpp/Ornith-1.0-35B                                      | diff        | 29.4   | 58.8   |
+| llama.cpp/Ornith-1.0-35B(bartowski)                           | whole       | 38.2   | 52.9   |
 | llama.cpp/gemma-4-31B-it(no think)                            | whole       | 8.8    | 52.9   |
 | anthropic/claude-haiku-4-5-20251001                           | diff        | 8.8    | 50.0   |
 | llama.cpp/gemma-4-31B-it(no think)                            | diff        | 5.9    | 50.0   |
 | llama.cpp/gpt-oss-120b                                        | diff        | 8.8    | 41.2   |
 | llama.cpp/Devstral-2-123B-Instruct-2512                       | diff        | 0.0    | 38.2   |
 | llama.cpp/Devstral-2-123B-Instruct-2512                       | whole       | 2.9    | 32.4   |
+| llama.cpp/Qwythos-9B-Claude-Mythos-5                          | diff        | 11.8   | 26.5   |
 | llama.cpp/gpt-oss-120b                                        | whole       | 11.8   | 26.5   |
 | llama.cpp/North-Mini-Code-1.0                                 | whole       | 8.8    | 26.5   |
 | llama.cpp/Devstral-Small-2-24B-Instruct-2512                  | diff        | 0.0    | 23.5   |
 | llama.cpp/North-Mini-Code-1.0                                 | diff        | 8.8    | 20.6   |
 | llama.cpp/Nex-N2-mini(fix chat-template)                      | diff        | 2.9    | 17.6   |
+| llama.cpp/Qwythos-9B-Claude-Mythos-5                          | whole       | 8.8    | 14.7   |
 | llama.cpp/Nex-N2-mini(fix chat-template)                      | whole       | 5.9    | 14.7   |
 | llama.cpp/Nex-N2-mini                                         | whole       | 5.9    | 11.8   |
 | llama.cpp/Devstral-Small-2-24B-Instruct-2512                  | whole       | 2.9    | 8.8    |
