@@ -24,33 +24,34 @@ MODEL_MAP = {
 }
 
 def convert_model_name(name: str) -> str:
-    if name.startswith(("openai/", "sglang/")) and "gpt-5" not in name:
-        if name not in MODEL_MAP:
+    if pd.isna(name):
+        return name
+    lower_name = name.lower()
+    if lower_name.startswith(("openai/", "sglang/")) and "gpt-5" not in lower_name:
+        if lower_name not in MODEL_MAP:
             print(f"Warning: no mapping for '{name}', leaving as-is.", file=sys.stderr)
             return name
-        return MODEL_MAP[name]
+        return MODEL_MAP[lower_name]
     return name
 
 
 def df_to_markdown(df: pd.DataFrame) -> str:
     headers = df.columns.tolist()
-    col_widths = [max(len(str(h)), df[h].astype(str).map(len).max()) for h in headers]
-
-    def row_str(values):
-        return "| " + " | ".join(str(v).ljust(w) for v, w in zip(values, col_widths)) + " |"
-
-    separator = "| " + " | ".join("-" * w for w in col_widths) + " |"
-
-    lines = [row_str(headers), separator]
+    lines = ["| " + " | ".join(headers) + " |"]
+    lines.append("| " + " | ".join("---" for _ in headers) + " |")
     for _, row in df.iterrows():
-        lines.append(row_str(row.tolist()))
-
+        formatted_vals = []
+        for val in row.tolist():
+            if isinstance(val, (int, float)):
+                formatted_vals.append(f"{val:g}")
+            else:
+                formatted_vals.append(str(val))
+        lines.append("| " + " | ".join(formatted_vals) + " |")
     return "\n".join(lines)
 
 
-def main(csv_path: str) -> None:
-    df = pd.read_csv(csv_path)
-
+def get_tables(path: str) -> dict[str, str]:
+    df = pd.read_csv(path)
     df = df[["model", "language", "edit_format", "pass_rate_1", "pass_rate_2"]].rename(
         columns={
             "model":       "Model",
@@ -63,14 +64,31 @@ def main(csv_path: str) -> None:
 
     df["Model"] = df["Model"].map(convert_model_name)
 
-    cpp_df    = df[df["Language"] == "cpp"   ].sort_values("pass@2", ascending=False).reset_index(drop=True).drop(columns="Language")
-    python_df = df[df["Language"] == "python"].sort_values("pass@2", ascending=False).reset_index(drop=True).drop(columns="Language")
+    cpp_df = df[df["Language"] == "cpp"].copy()
+    python_df = df[df["Language"] == "python"].copy()
 
-    print("### C++\n")
-    print(df_to_markdown(cpp_df))
-    print("\n")
-    print("### Python\n")
-    print(df_to_markdown(python_df))
+    sort_cols = ["pass@2", "pass@1", "Model", "Edit-format"]
+    ascending = [False, False, True, False]
+    
+    def sort_key(col):
+        if col.name == "Model":
+            return col.str.lower()
+        return col
+
+    cpp_df = cpp_df.sort_values(by=sort_cols, ascending=ascending, key=sort_key).reset_index(drop=True).drop(columns="Language")
+    python_df = python_df.sort_values(by=sort_cols, ascending=ascending, key=sort_key).reset_index(drop=True).drop(columns="Language")
+
+    return {
+        "cpp": df_to_markdown(cpp_df),
+        "python": df_to_markdown(python_df),
+    }
+
+
+def main(csv_path: str) -> None:
+    tables = get_tables(csv_path)
+    print(tables["cpp"])
+    print()
+    print(tables["python"])
 
 
 if __name__ == "__main__":

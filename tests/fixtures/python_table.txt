@@ -1,5 +1,5 @@
 | Model | Edit-format | pass@1 | pass@2 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | gemini/gemini-3-flash-preview | diff-fenced | 76.5 | 97.1 |
 | llama.cpp/Qwen3-Coder-Next | whole | 44.1 | 79.4 |
 | openai/gpt-5-mini | diff | 23.5 | 79.4 |
