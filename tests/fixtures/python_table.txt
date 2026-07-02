@@ -9,19 +9,13 @@
 | llama.cpp/Qwen3.6-27B | whole | 38.2 | 70.6 |
 | llama.cpp/gemma-4-31B-it | diff | 8.8 | 70.6 |
 | gemini/gemini-2.5-flash | diff-fenced | 29.4 | 67.6 |
-| openai/ornith-35b-q8 | whole | 38.2 | 64.7 |
-| openai/ornith-35b-q5 | diff | 35.3 | 64.7 |
 | llama.cpp/gemma-4-31B-it | whole | 14.7 | 64.7 |
 | llama.cpp/Qwen3.6-27B | diff | 44.1 | 61.8 |
-| openai/ornith-35b-q5 | whole | 35.3 | 61.8 |
 | llama.cpp/Ornith-1.0-35B(bartowski) | diff | 32.4 | 61.8 |
-| openai/ornith-35b-q6 | whole | 32.4 | 61.8 |
-| openai/ornith-35b-q6 | diff | 26.5 | 61.8 |
 | llama.cpp/Qwen3.6-35B-A3B | whole | 41.2 | 58.8 |
 | llama.cpp/Qwen3.6-35B-A3B | diff | 32.4 | 58.8 |
 | llama.cpp/Ornith-1.0-35B | diff | 29.4 | 58.8 |
 | llama.cpp/Ornith-1.0-35B | whole | 26.5 | 58.8 |
-| openai/ornith-35b-q8 | diff | 26.5 | 58.8 |
 | llama.cpp/Ornith-1.0-35B(bartowski) | whole | 38.2 | 52.9 |
 | llama.cpp/gemma-4-31B-it(no think) | whole | 8.8 | 52.9 |
 | anthropic/claude-haiku-4-5-20251001 | diff | 8.8 | 50 |

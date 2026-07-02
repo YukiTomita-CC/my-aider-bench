@@ -176,7 +176,7 @@ def main() -> None:
     aider_dir       = bench.get("aider_dir", "/workspace/aider")
     results_dir     = bench.get("results_dir", "/workspace/benchmark-results")
 
-    models = cfg["models"]
+    models = [m for m in cfg["models"] if m.get("completed") is not True]
     total = len(models) * len(EDIT_FORMATS) * len(LANGUAGES)
     log.info(
         f"Total runs: {total}  "
