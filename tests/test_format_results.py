@@ -2,14 +2,15 @@ from pathlib import Path
 
 import pytest
 
-from utils.format_results import get_tables
+from utils.format_results import ResultsFormatter
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
 
 @pytest.fixture(scope="module")
 def tables() -> dict[str, str]:
-    return get_tables(FIXTURES / "results.csv")
+    results_formatter = ResultsFormatter(FIXTURES)
+    return results_formatter.get_tables(FIXTURES / "results.csv")
 
 
 def test_cpp_table(tables: dict[str, str]) -> None:
