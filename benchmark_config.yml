@@ -250,14 +250,3 @@ models:
       num_ctx: 32768
       max_tokens: 8192
     completed: true
-
-  - name: gemma4-26b-a4b
-    repo: unsloth/gemma-4-26B-A4B-it-qat-GGUF
-    gguf_filter: "*UD-Q4_K_XL*"
-    display_name: llama.cpp/gemma-4-26B-A4B-it
-    server:
-      extra_args: "--temp 1.0 --top-p 0.95 --top-k 64 -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
-    aider:
-      num_ctx: 32768
-      max_tokens: 8192
-    completed: false
