@@ -5,7 +5,7 @@ import yaml
 from pathlib import Path
 
 DEFAULT_INPUT_DIR = Path(__file__).parent.parent / "results"
-OUTPUT_PATH = Path("/workspace/benchmark-results/results/results.csv")
+OUTPUT_PATH = Path(DEFAULT_INPUT_DIR) /"results.csv"
 
 
 def extract_language(dirname: str) -> str:

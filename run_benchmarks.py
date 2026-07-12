@@ -1,6 +1,7 @@
 import argparse
 import logging
 import os
+import re
 import shlex
 import subprocess
 import sys
@@ -11,6 +12,7 @@ import urllib.request
 from pathlib import Path
 
 import yaml
+from utils.format_results import ResultsFormatter
 
 # ── Logging configuration ───────────────────────────────────────────────────
 logging.basicConfig(
@@ -145,6 +147,36 @@ def run_benchmark(
 def push_results(model_name: str, aider_dir: str, results_dir: str) -> None:
     log.info("Collecting results ...")
     subprocess.run([sys.executable, "collect_results.py"], cwd=aider_dir, check=True)
+
+    log.info("Converting results to CSV ...")
+    subprocess.run(
+        [sys.executable, os.path.join(results_dir, "utils", "convert_to_csv.py")],
+        cwd=results_dir, check=True
+    )
+
+    log.info("Formatting results ...")
+    results_formatter = ResultsFormatter()
+    tables = results_formatter.get_tables()
+
+    readme_path = os.path.join(results_dir, "README.md")
+    with open(readme_path, "r") as f:
+        readme_content = f.read()
+
+    new_content = f"""### C++
+
+{tables["cpp"]}
+
+
+### Python
+
+{tables["python"]}
+"""
+
+    pattern = r"(<!-- BEGIN AUTO-GENERATED MARKDOWN TABLE -->).*?(<!-- END AUTO-GENERATED MARKDOWN TABLE -->)"
+    readme_content = re.sub(pattern, f"\\1\n{new_content}\n\\2", readme_content, flags=re.DOTALL)
+
+    with open(readme_path, "w") as f:
+        f.write(readme_content)
 
     log.info("Pushing results to GitHub ...")
     subprocess.run(["git", "add", "."], cwd=results_dir, check=True)
