@@ -19,105 +19,107 @@ Results are primarily for models supported by llama.cpp, measured in GGUF format
 Some results for OpenAI, Claude, and Google API models are also included.
 
 A summary of `results.csv` is shown below. In most cases, open-weight models tend to score higher with `whole` than `diff` edit format.
+<!-- BEGIN AUTO-GENERATED MARKDOWN TABLE -->
 ### C++
 
-| Model                                                         | Edit-format | pass@1 | pass@2 |
-| ------------------------------------------------------------- | ----------- | ------ | ------ |
-| anthropic/claude-sonnet-4-5-20250929                          | diff        | 26.9   | 88.5   |
-| gemini/gemini-3-flash-preview                                 | diff-fenced | 50.0   | 84.6   |
-| llama.cpp/Qwen3.6-27B                                         | whole       | 30.8   | 84.6   |
-| openai/gpt-5-mini                                             | diff        | 15.4   | 73.1   |
-| llama.cpp/Ornith-1.0-35B(bartowski)                           | diff        | 23.1   | 73.1   |
-| llama.cpp/Ornith-1.0-35B(bartowski)                           | whole       | 26.9   | 73.1   |
-| llama.cpp/Ornith-1.0-35B                                      | whole       | 34.6   | 73.1   |
-| llama.cpp/Qwen3.6-27B                                         | diff        | 23.1   | 69.2   |
-| llama.cpp/Qwen3.6-35B-A3B                                     | whole       | 23.1   | 69.2   |
-| llama.cpp/Ornith-1.0-35B                                      | diff        | 30.8   | 65.4   |
-| llama.cpp/Qwen3-Coder-Next                                    | diff        | 19.2   | 65.4   |
-| openai/gpt-5.2                                                | diff        | 23.1   | 61.5   |
-| llama.cpp/Qwen3.6-35B-A3B                                     | diff        | 30.8   | 61.5   |
-| llama.cpp/Qwen3-Coder-Next                                    | whole       | 23.1   | 61.5   |
-| llama.cpp/gemma-4-31B-it                                      | whole       | 7.7    | 50.0   |
-| llama.cpp/Devstral-2-123B-Instruct-2512                       | diff        | 7.7    | 50.0   |
-| gemini/gemini-2.5-flash                                       | diff-fenced | 7.7    | 46.2   |
-| llama.cpp/gemma-4-31B-it                                      | diff        | 7.7    | 46.2   |
-| llama.cpp/Devstral-2-123B-Instruct-2512                       | whole       | 11.5   | 42.3   |
-| anthropic/claude-haiku-4-5-20251001                           | diff        | 7.7    | 42.3   |
-| llama.cpp/gemma-4-31B-it(no think)                            | diff        | 7.7    | 42.3   |
-| llama.cpp/gemma-4-31B-it(no think)                            | whole       | 7.7    | 34.6   |
-| llama.cpp/gpt-oss-120b                                        | diff        | 3.8    | 30.8   |
-| llama.cpp/Qwythos-9B-Claude-Mythos-5                          | diff        | 0.0    | 26.9   |
-| llama.cpp/gpt-oss-120b                                        | whole       | 0.0    | 23.1   |
-| llama.cpp/North-Mini-Code-1.0                                 | whole       | 0.0    | 23.1   |
-| llama.cpp/Qwythos-9B-Claude-Mythos-5                          | whole       | 0.0    | 23.1   |
-| llama.cpp/Devstral-Small-2-24B-Instruct-2512                  | diff        | 3.8    | 23.1   |
-| llama.cpp/GLM-4.7-Flash                                       | whole       | 0.0    | 19.2   |
-| llama.cpp/Nex-N2-mini(fix chat-template)                      | whole       | 7.7    | 19.2   |
-| llama.cpp/gemma-4-26B-A4B-it                                  | whole       | 0.0    | 19.2   |
-| llama.cpp/North-Mini-Code-1.0                                 | diff        | 3.8    | 15.4   |
-| llama.cpp/gemma-4-12B-it                                      | diff        | 0.0    | 15.4   |
-| llama.cpp/Devstral-Small-2-24B-Instruct-2512                  | whole       | 3.8    | 11.5   |
-| llama.cpp/gemma-4-12B-it                                      | whole       | 0.0    | 11.5   |
-| llama.cpp/gpt-oss-20b                                         | diff        | 0.0    | 7.7    |
-| llama.cpp/Nex-N2-mini                                         | whole       | 7.7    | 7.7    |
-| llama.cpp/GLM-4.7-Flash                                       | diff        | 0.0    | 7.7    |
-| llama.cpp/gemma-4-26B-A4B-it                                  | diff        | 0.0    | 3.8    |
-| llama.cpp/gpt-oss-20b                                         | whole       | 0.0    | 3.8    |
-| llama.cpp/Nex-N2-mini(fix chat-template)                      | diff        | 3.8    | 3.8    |
-| llama.cpp/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2 | diff        | 0.0    | 0.0    |
-| llama.cpp/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2 | whole       | 0.0    | 0.0    |
-| llama.cpp/Nex-N2-mini                                         | diff        | 0.0    | 0.0    |
+| Model | Edit-format | pass@1 | pass@2 |
+| --- | --- | --- | --- |
+| anthropic/claude-sonnet-4-5-20250929 | diff | 26.9 | 88.5 |
+| gemini/gemini-3-flash-preview | diff-fenced | 50 | 84.6 |
+| llama.cpp/Qwen3.6-27B | whole | 30.8 | 84.6 |
+| llama.cpp/Ornith-1.0-35B | whole | 34.6 | 73.1 |
+| llama.cpp/Ornith-1.0-35B(bartowski) | whole | 26.9 | 73.1 |
+| llama.cpp/Ornith-1.0-35B(bartowski) | diff | 23.1 | 73.1 |
+| openai/gpt-5-mini | diff | 15.4 | 73.1 |
+| llama.cpp/Qwen3.6-27B | diff | 23.1 | 69.2 |
+| llama.cpp/Qwen3.6-35B-A3B | whole | 23.1 | 69.2 |
+| llama.cpp/Ornith-1.0-35B | diff | 30.8 | 65.4 |
+| llama.cpp/Qwen3-Coder-Next | diff | 19.2 | 65.4 |
+| llama.cpp/Qwen3.6-35B-A3B | diff | 30.8 | 61.5 |
+| llama.cpp/Qwen3-Coder-Next | whole | 23.1 | 61.5 |
+| openai/gpt-5.2 | diff | 23.1 | 61.5 |
+| llama.cpp/Devstral-2-123B-Instruct-2512 | diff | 7.7 | 50 |
+| llama.cpp/gemma-4-31B-it | whole | 7.7 | 50 |
+| gemini/gemini-2.5-flash | diff-fenced | 7.7 | 46.2 |
+| llama.cpp/gemma-4-31B-it | diff | 7.7 | 46.2 |
+| llama.cpp/Devstral-2-123B-Instruct-2512 | whole | 11.5 | 42.3 |
+| anthropic/claude-haiku-4-5-20251001 | diff | 7.7 | 42.3 |
+| llama.cpp/gemma-4-31B-it(no think) | diff | 7.7 | 42.3 |
+| llama.cpp/gemma-4-31B-it(no think) | whole | 7.7 | 34.6 |
+| llama.cpp/gpt-oss-120b | diff | 3.8 | 30.8 |
+| llama.cpp/Qwythos-9B-Claude-Mythos-5 | diff | 0 | 26.9 |
+| llama.cpp/Devstral-Small-2-24B-Instruct-2512 | diff | 3.8 | 23.1 |
+| llama.cpp/gemma-4-26B-A4B-it | diff | 3.8 | 23.1 |
+| llama.cpp/gpt-oss-120b | whole | 0 | 23.1 |
+| llama.cpp/North-Mini-Code-1.0 | whole | 0 | 23.1 |
+| llama.cpp/Qwythos-9B-Claude-Mythos-5 | whole | 0 | 23.1 |
+| llama.cpp/Nex-N2-mini(fix chat-template) | whole | 7.7 | 19.2 |
+| llama.cpp/gemma-4-26B-A4B-it | whole | 0 | 19.2 |
+| llama.cpp/GLM-4.7-Flash | whole | 0 | 19.2 |
+| llama.cpp/North-Mini-Code-1.0 | diff | 3.8 | 15.4 |
+| llama.cpp/gemma-4-12B-it | diff | 0 | 15.4 |
+| llama.cpp/Devstral-Small-2-24B-Instruct-2512 | whole | 3.8 | 11.5 |
+| llama.cpp/gemma-4-12B-it | whole | 0 | 11.5 |
+| llama.cpp/Nex-N2-mini | whole | 7.7 | 7.7 |
+| llama.cpp/GLM-4.7-Flash | diff | 0 | 7.7 |
+| llama.cpp/gpt-oss-20b | diff | 0 | 7.7 |
+| llama.cpp/Nex-N2-mini(fix chat-template) | diff | 3.8 | 3.8 |
+| llama.cpp/gpt-oss-20b | whole | 0 | 3.8 |
+| llama.cpp/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2 | whole | 0 | 0 |
+| llama.cpp/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2 | diff | 0 | 0 |
+| llama.cpp/Nex-N2-mini | diff | 0 | 0 |
 
 
 ### Python
 
-| Model                                                         | Edit-format | pass@1 | pass@2 |
-| ------------------------------------------------------------- | ----------- | ------ | ------ |
-| gemini/gemini-3-flash-preview                                 | diff-fenced | 76.5   | 97.1   |
-| openai/gpt-5-mini                                             | diff        | 23.5   | 79.4   |
-| llama.cpp/Qwen3-Coder-Next                                    | whole       | 44.1   | 79.4   |
-| llama.cpp/Qwen3-Coder-Next                                    | diff        | 44.1   | 76.5   |
-| openai/gpt-5.2                                                | diff        | 38.2   | 76.5   |
-| anthropic/claude-sonnet-4-5-20250929                          | diff        | 29.4   | 76.5   |
-| llama.cpp/Qwen3.6-27B                                         | whole       | 38.2   | 70.6   |
-| llama.cpp/gemma-4-31B-it                                      | diff        | 8.8    | 70.6   |
-| gemini/gemini-2.5-flash                                       | diff-fenced | 29.4   | 67.6   |
-| llama.cpp/gemma-4-31B-it                                      | whole       | 14.7   | 64.7   |
-| llama.cpp/Qwen3.6-27B                                         | diff        | 44.1   | 61.8   |
-| llama.cpp/Ornith-1.0-35B(bartowski)                           | diff        | 32.4   | 61.8   |
-| llama.cpp/Qwen3.6-35B-A3B                                     | diff        | 32.4   | 58.8   |
-| llama.cpp/Qwen3.6-35B-A3B                                     | whole       | 41.2   | 58.8   |
-| llama.cpp/Ornith-1.0-35B                                      | whole       | 26.5   | 58.8   |
-| llama.cpp/Ornith-1.0-35B                                      | diff        | 29.4   | 58.8   |
-| llama.cpp/Ornith-1.0-35B(bartowski)                           | whole       | 38.2   | 52.9   |
-| llama.cpp/gemma-4-31B-it(no think)                            | whole       | 8.8    | 52.9   |
-| anthropic/claude-haiku-4-5-20251001                           | diff        | 8.8    | 50.0   |
-| llama.cpp/gemma-4-31B-it(no think)                            | diff        | 5.9    | 50.0   |
-| llama.cpp/gpt-oss-120b                                        | diff        | 8.8    | 41.2   |
-| llama.cpp/Devstral-2-123B-Instruct-2512                       | diff        | 0.0    | 38.2   |
-| llama.cpp/Devstral-2-123B-Instruct-2512                       | whole       | 2.9    | 32.4   |
-| llama.cpp/Qwythos-9B-Claude-Mythos-5                          | diff        | 11.8   | 26.5   |
-| llama.cpp/gpt-oss-120b                                        | whole       | 11.8   | 26.5   |
-| llama.cpp/North-Mini-Code-1.0                                 | whole       | 8.8    | 26.5   |
-| llama.cpp/Devstral-Small-2-24B-Instruct-2512                  | diff        | 0.0    | 23.5   |
-| llama.cpp/North-Mini-Code-1.0                                 | diff        | 8.8    | 20.6   |
-| llama.cpp/Nex-N2-mini(fix chat-template)                      | diff        | 2.9    | 17.6   |
-| llama.cpp/Qwythos-9B-Claude-Mythos-5                          | whole       | 8.8    | 14.7   |
-| llama.cpp/Nex-N2-mini(fix chat-template)                      | whole       | 5.9    | 14.7   |
-| llama.cpp/Nex-N2-mini                                         | whole       | 5.9    | 11.8   |
-| llama.cpp/Devstral-Small-2-24B-Instruct-2512                  | whole       | 2.9    | 8.8    |
-| llama.cpp/gemma-4-26B-A4B-it                                  | diff        | 2.9    | 8.8    |
-| llama.cpp/Nex-N2-mini                                         | diff        | 8.8    | 8.8    |
-| llama.cpp/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2 | diff        | 5.9    | 5.9    |
-| llama.cpp/GLM-4.7-Flash                                       | whole       | 2.9    | 5.9    |
-| llama.cpp/gpt-oss-20b                                         | whole       | 0.0    | 5.9    |
-| llama.cpp/gemma-4-12B-it                                      | whole       | 0.0    | 5.9    |
-| llama.cpp/gemma-4-12B-it                                      | diff        | 0.0    | 5.9    |
-| llama.cpp/GLM-4.7-Flash                                       | diff        | 0.0    | 2.9    |
-| llama.cpp/gemma-4-26B-A4B-it                                  | whole       | 0.0    | 2.9    |
-| llama.cpp/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2 | whole       | 0.0    | 0.0    |
-| llama.cpp/gpt-oss-20b                                         | diff        | 0.0    | 0.0    |
+| Model | Edit-format | pass@1 | pass@2 |
+| --- | --- | --- | --- |
+| gemini/gemini-3-flash-preview | diff-fenced | 76.5 | 97.1 |
+| llama.cpp/Qwen3-Coder-Next | whole | 44.1 | 79.4 |
+| openai/gpt-5-mini | diff | 23.5 | 79.4 |
+| llama.cpp/Qwen3-Coder-Next | diff | 44.1 | 76.5 |
+| openai/gpt-5.2 | diff | 38.2 | 76.5 |
+| anthropic/claude-sonnet-4-5-20250929 | diff | 29.4 | 76.5 |
+| llama.cpp/Qwen3.6-27B | whole | 38.2 | 70.6 |
+| llama.cpp/gemma-4-31B-it | diff | 8.8 | 70.6 |
+| gemini/gemini-2.5-flash | diff-fenced | 29.4 | 67.6 |
+| llama.cpp/gemma-4-31B-it | whole | 14.7 | 64.7 |
+| llama.cpp/Qwen3.6-27B | diff | 44.1 | 61.8 |
+| llama.cpp/Ornith-1.0-35B(bartowski) | diff | 32.4 | 61.8 |
+| llama.cpp/Qwen3.6-35B-A3B | whole | 41.2 | 58.8 |
+| llama.cpp/Qwen3.6-35B-A3B | diff | 32.4 | 58.8 |
+| llama.cpp/Ornith-1.0-35B | diff | 29.4 | 58.8 |
+| llama.cpp/Ornith-1.0-35B | whole | 26.5 | 58.8 |
+| llama.cpp/Ornith-1.0-35B(bartowski) | whole | 38.2 | 52.9 |
+| llama.cpp/gemma-4-31B-it(no think) | whole | 8.8 | 52.9 |
+| anthropic/claude-haiku-4-5-20251001 | diff | 8.8 | 50 |
+| llama.cpp/gemma-4-31B-it(no think) | diff | 5.9 | 50 |
+| llama.cpp/gpt-oss-120b | diff | 8.8 | 41.2 |
+| llama.cpp/Devstral-2-123B-Instruct-2512 | diff | 0 | 38.2 |
+| llama.cpp/Devstral-2-123B-Instruct-2512 | whole | 2.9 | 32.4 |
+| llama.cpp/gpt-oss-120b | whole | 11.8 | 26.5 |
+| llama.cpp/Qwythos-9B-Claude-Mythos-5 | diff | 11.8 | 26.5 |
+| llama.cpp/North-Mini-Code-1.0 | whole | 8.8 | 26.5 |
+| llama.cpp/Devstral-Small-2-24B-Instruct-2512 | diff | 0 | 23.5 |
+| llama.cpp/North-Mini-Code-1.0 | diff | 8.8 | 20.6 |
+| llama.cpp/Nex-N2-mini(fix chat-template) | diff | 2.9 | 17.6 |
+| llama.cpp/Qwythos-9B-Claude-Mythos-5 | whole | 8.8 | 14.7 |
+| llama.cpp/Nex-N2-mini(fix chat-template) | whole | 5.9 | 14.7 |
+| llama.cpp/Nex-N2-mini | whole | 5.9 | 11.8 |
+| llama.cpp/Nex-N2-mini | diff | 8.8 | 8.8 |
+| llama.cpp/Devstral-Small-2-24B-Instruct-2512 | whole | 2.9 | 8.8 |
+| llama.cpp/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2 | diff | 5.9 | 5.9 |
+| llama.cpp/GLM-4.7-Flash | whole | 2.9 | 5.9 |
+| llama.cpp/gemma-4-12B-it | whole | 0 | 5.9 |
+| llama.cpp/gemma-4-12B-it | diff | 0 | 5.9 |
+| llama.cpp/gemma-4-26B-A4B-it | diff | 0 | 5.9 |
+| llama.cpp/gpt-oss-20b | whole | 0 | 5.9 |
+| llama.cpp/gemma-4-26B-A4B-it | whole | 0 | 2.9 |
+| llama.cpp/GLM-4.7-Flash | diff | 0 | 2.9 |
+| llama.cpp/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2 | whole | 0 | 0 |
+| llama.cpp/gpt-oss-20b | diff | 0 | 0 |
 
+<!-- END AUTO-GENERATED MARKDOWN TABLE -->
 ## About the Benchmarks
 
 - Measurement environment:
