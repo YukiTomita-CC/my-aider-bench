@@ -158,6 +158,7 @@ def push_results(model_name: str, aider_dir: str, results_dir: str) -> None:
     results_formatter = ResultsFormatter()
     tables = results_formatter.get_tables()
 
+    log.info("Updating README ...")
     readme_path = os.path.join(results_dir, "README.md")
     with open(readme_path, "r") as f:
         readme_content = f.read()
@@ -227,8 +228,9 @@ def main() -> None:
         os.makedirs(local_dir, exist_ok=True)
 
         # ① Download model
-        download_model(repo, gguf_filter, local_dir)
-        gguf_path = find_gguf(local_dir)
+        # download_model(repo, gguf_filter, local_dir)
+        # gguf_path = find_gguf(local_dir)
+        gguf_path = "sample.gguf"
         log.info(f"GGUF: {gguf_path}")
 
         # ② Generate temporary model_settings.yml
@@ -237,9 +239,9 @@ def main() -> None:
         )
 
         # ③ Start server (always stopped in finally block)
-        proc = start_server(gguf_path, alias, server_cfg, server_bin)
+        # proc = start_server(gguf_path, alias, server_cfg, server_bin)
         try:
-            wait_for_server(health_url, health_timeout)
+            # wait_for_server(health_url, health_timeout)
 
             # ④ Benchmark loop (whole/diff × python/cpp)
             for edit_format in EDIT_FORMATS:
@@ -248,13 +250,13 @@ def main() -> None:
                     log.info(f"{'='*60}")
                     log.info(f"Suite: {suite}")
                     log.info(f"{'='*60}")
-                    run_benchmark(
-                        suite, alias, edit_format, language,
-                        threads, model_settings_path, benchmark_script,
-                    )
+                    # run_benchmark(
+                    #     suite, alias, edit_format, language,
+                    #     threads, model_settings_path, benchmark_script,
+                    # )
 
         finally:
-            stop_server(proc)
+            # stop_server(proc)
             os.unlink(model_settings_path)
 
         # Only reached if all 4 runs succeeded
@@ -262,7 +264,7 @@ def main() -> None:
 
         # Delete used GGUF to save disk space (keep only one file at a time)
         log.info(f"Deleting GGUF: {gguf_path}")
-        os.unlink(gguf_path)
+        # os.unlink(gguf_path)
 
     log.info("All benchmarks completed.")
 
