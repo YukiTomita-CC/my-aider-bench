@@ -250,3 +250,14 @@ models:
       num_ctx: 32768
       max_tokens: 8192
     completed: true
+
+  - name: deepseek-v4-flash
+    repo: unsloth/DeepSeek-V4-Flash-GGUF
+    gguf_filter: "*UD-Q8_K_XL*"
+    display_name: llama.cpp/deepseek-v4-flash
+    server:
+      extra_args: "--temp 1.0 --top-p 1.0 --min-p 0.0 -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on --chat-template-kwargs '{\"reasoning_effort\": \"max\"}' --cache-type-k q8_0 --cache-type-v q8_0"
+    aider:
+      num_ctx: 32768
+      max_tokens: 8192
+    completed: false
