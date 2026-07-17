@@ -27,10 +27,12 @@ A summary of `results.csv` is shown below. In most cases, open-weight models ten
 | anthropic/claude-sonnet-4-5-20250929 | diff | 26.9 | 88.5 |
 | gemini/gemini-3-flash-preview | diff-fenced | 50 | 84.6 |
 | llama.cpp/Qwen3.6-27B | whole | 30.8 | 84.6 |
+| llama.cpp/ThinkingCap-Qwen3.6-27B | whole | 34.6 | 80.8 |
 | llama.cpp/Ornith-1.0-35B | whole | 34.6 | 73.1 |
 | llama.cpp/Ornith-1.0-35B(bartowski) | whole | 26.9 | 73.1 |
 | llama.cpp/Ornith-1.0-35B(bartowski) | diff | 23.1 | 73.1 |
 | openai/gpt-5-mini | diff | 15.4 | 73.1 |
+| llama.cpp/ThinkingCap-Qwen3.6-27B | diff | 30.8 | 69.2 |
 | llama.cpp/Qwen3.6-27B | diff | 23.1 | 69.2 |
 | llama.cpp/Qwen3.6-35B-A3B | whole | 23.1 | 69.2 |
 | llama.cpp/Ornith-1.0-35B | diff | 30.8 | 65.4 |
@@ -78,6 +80,8 @@ A summary of `results.csv` is shown below. In most cases, open-weight models ten
 | llama.cpp/Qwen3-Coder-Next | whole | 44.1 | 79.4 |
 | openai/gpt-5-mini | diff | 23.5 | 79.4 |
 | llama.cpp/Qwen3-Coder-Next | diff | 44.1 | 76.5 |
+| llama.cpp/ThinkingCap-Qwen3.6-27B | diff | 44.1 | 76.5 |
+| llama.cpp/ThinkingCap-Qwen3.6-27B | whole | 38.2 | 76.5 |
 | openai/gpt-5.2 | diff | 38.2 | 76.5 |
 | anthropic/claude-sonnet-4-5-20250929 | diff | 29.4 | 76.5 |
 | llama.cpp/Qwen3.6-27B | whole | 38.2 | 70.6 |
