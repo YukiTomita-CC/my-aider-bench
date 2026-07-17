@@ -251,12 +251,23 @@ models:
       max_tokens: 8192
     completed: true
 
-  - name: deepseek-v4-flash
-    repo: unsloth/DeepSeek-V4-Flash-GGUF
-    gguf_filter: "*UD-Q8_K_XL*"
-    display_name: llama.cpp/deepseek-v4-flash
+#  - name: deepseek-v4-flash
+#    repo: unsloth/DeepSeek-V4-Flash-GGUF
+#    gguf_filter: "*UD-Q8_K_XL*"
+#    display_name: llama.cpp/deepseek-v4-flash
+#    server:
+#      extra_args: "--temp 1.0 --top-p 1.0 --min-p 0.0 -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on --chat-template-kwargs '{\"reasoning_effort\": \"max\"}' --cache-type-k q8_0 --cache-type-v q8_0"
+#    aider:
+#      num_ctx: 32768
+#      max_tokens: 8192
+#    completed: false
+
+  - name: thinkingcap-qwen36-27b
+    repo: bottlecapai/ThinkingCap-Qwen3.6-27B-GGUF
+    gguf_filter: "*Q4*"
+    display_name: llama.cpp/ThinkingCap-Qwen3.6-27B
     server:
-      extra_args: "--temp 1.0 --top-p 1.0 --min-p 0.0 -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on --chat-template-kwargs '{\"reasoning_effort\": \"max\"}' --cache-type-k q8_0 --cache-type-v q8_0"
+      extra_args: "--temp 0.6 --top-p 0.95 --top-k 20 --presence-penalty 0.0 --repeat-penalty 1.0 --min-p 0.00 -c 131072 --spec-type draft-mtp --spec-draft-n-max 2 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
     aider:
       num_ctx: 32768
       max_tokens: 8192
