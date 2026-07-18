@@ -60,6 +60,7 @@ A summary of `results.csv` is shown below. In most cases, open-weight models ten
 | llama.cpp/GLM-4.7-Flash | whole | 0 | 19.2 |
 | llama.cpp/North-Mini-Code-1.0 | diff | 3.8 | 15.4 |
 | llama.cpp/gemma-4-12B-it | diff | 0 | 15.4 |
+| llama.cpp/Ternary-Bonsai-27B | whole | 0 | 15.4 |
 | llama.cpp/Devstral-Small-2-24B-Instruct-2512 | whole | 3.8 | 11.5 |
 | llama.cpp/gemma-4-12B-it | whole | 0 | 11.5 |
 | llama.cpp/Nex-N2-mini | whole | 7.7 | 7.7 |
@@ -70,6 +71,7 @@ A summary of `results.csv` is shown below. In most cases, open-weight models ten
 | llama.cpp/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2 | whole | 0 | 0 |
 | llama.cpp/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2 | diff | 0 | 0 |
 | llama.cpp/Nex-N2-mini | diff | 0 | 0 |
+| llama.cpp/Ternary-Bonsai-27B | diff | 0 | 0 |
 
 
 ### Python
@@ -100,6 +102,7 @@ A summary of `results.csv` is shown below. In most cases, open-weight models ten
 | llama.cpp/gemma-4-31B-it(no think) | diff | 5.9 | 50 |
 | llama.cpp/gpt-oss-120b | diff | 8.8 | 41.2 |
 | llama.cpp/Devstral-2-123B-Instruct-2512 | diff | 0 | 38.2 |
+| llama.cpp/Ternary-Bonsai-27B | whole | 8.8 | 32.4 |
 | llama.cpp/Devstral-2-123B-Instruct-2512 | whole | 2.9 | 32.4 |
 | llama.cpp/gpt-oss-120b | whole | 11.8 | 26.5 |
 | llama.cpp/Qwythos-9B-Claude-Mythos-5 | diff | 11.8 | 26.5 |
@@ -112,6 +115,7 @@ A summary of `results.csv` is shown below. In most cases, open-weight models ten
 | llama.cpp/Nex-N2-mini | whole | 5.9 | 11.8 |
 | llama.cpp/Nex-N2-mini | diff | 8.8 | 8.8 |
 | llama.cpp/Devstral-Small-2-24B-Instruct-2512 | whole | 2.9 | 8.8 |
+| llama.cpp/Ternary-Bonsai-27B | diff | 2.9 | 8.8 |
 | llama.cpp/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2 | diff | 5.9 | 5.9 |
 | llama.cpp/GLM-4.7-Flash | whole | 2.9 | 5.9 |
 | llama.cpp/gemma-4-12B-it | whole | 0 | 5.9 |
