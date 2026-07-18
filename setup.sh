@@ -46,7 +46,7 @@ echo " Step 1: Build llama.cpp"
 echo "========================================"
 
 cd /workspace
-git clone https://github.com/ggml-org/llama.cpp
+git clone https://github.com/PrismML-Eng/llama.cpp
 cd llama.cpp
 
 echo "→ Running CMake configuration..."
