@@ -271,4 +271,15 @@ models:
     aider:
       num_ctx: 32768
       max_tokens: 8192
+    completed: true
+
+  - name: ternary-bonsai-27b
+    repo: prism-ml/Ternary-Bonsai-27B-gguf
+    gguf_filter: "Ternary-Bonsai-27B-Q2_0.gguf"
+    display_name: llama.cpp/Ternary-Bonsai-27B
+    server:
+      extra_args: "--temp 0.7 --top-p 0.95 --top-k 20 -c 131072 -ngl 99 --jinja -fa on --parallel 4 --reasoning on"
+    aider:
+      num_ctx: 32768
+      max_tokens: 8192
     completed: false
